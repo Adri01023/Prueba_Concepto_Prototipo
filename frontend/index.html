@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prueba de Concepto</title>
+</head>
+
+<body>
+
+<h1>Ventas</h1>
+
+<button onclick="cargarDatos()">Cargar datos</button>
+
+<ul id="lista"></ul>
+
+<h2>Gráfica</h2>
+
+<img id="grafica" width="500">
+
+<script>
+
+async function cargarDatos() {
+
+    const response = await fetch("http://127.0.0.1:8000/data");
+    const data = await response.json();
+
+    const lista = document.getElementById("lista");
+    lista.innerHTML = "";
+
+    data.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item.mes + " : " + item.ventas;
+        lista.appendChild(li);
+    });
+
+    document.getElementById("grafica").src =
+        "http://127.0.0.1:8000/plot";
+}
+
+</script>
+
+</body>
+</html>
