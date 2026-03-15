@@ -66,6 +66,9 @@ pip install -r requerimientos.txt
 
 Ejecutar el archivo bd.py
 
+Como resultado de esta ejecución se generará un fichero llamado datos.db
+que contendrá la base de datos con los valores insertados de prueba.
+
 ---
 
 # Ejecutar el servidor API
@@ -124,5 +127,4 @@ El frontend permite:
 
 # Conclusión
 
-Con esta prueba de concepto se establecen las dependencias y sus respectivas versiones que se van a usar (previsiblemente) en el proyecto, gracias a esta prueba de concepto
-se ha descubierto la necesidad de una nueva dependencia (Uvicorn) que actua como servidor web, las versiones de las dependencias se encuentran en el fichero requerimientos.txt que se encuentra en este mismo repositorio.
+Con esta prueba de concepto se establecen las dependencias y sus respectivas versiones que se van a usar (previsiblemente) en el proyecto, gracias a esta prueba de concepto se ha descubierto la necesidad de una nueva dependencia (Uvicorn) que actua como servidor web, las versiones de las dependencias se encuentran en el fichero requerimientos.txt que se encuentra en este mismo repositorio.
